@@ -78,4 +78,10 @@ context_menu.add_command(label="Delete")
 
 canvas.bind("<Button-3>", show_context_menu) # Bind right-click (Button-3)
 
+def clear_images():
+    loadedImgs.clear()
+
+clear_button = tk.Button(main, text="Clear Images", command=clear_images)
+canvas.create_window(100, 0, window=clear_button, anchor=tk.NW)
+
 main.mainloop()
